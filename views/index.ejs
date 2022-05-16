@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="/styles/styles.css" rel="stylesheet">
+    <script src="/js/formValidations.js"></script>
+    <title>Julio Silva || Psicologo</title>
+</head>
+<body>  
+        <!--Header-->
+    <header class="sticky top-0 z-30 w-full px-2 py-4 bg-white shadow-xl shadow-blue-600/20 sm:px-4">
+            <div class="flex items-center justify-between mx-auto max-w-7xl">
+            <a href="#">
+                <span class="text-3xl font-extrabold ">Julio Silva </span>
+            </a>
+            <div class="flex items-center space-x-1">
+                <ul class="hidden space-x-2 md:inline-flex">
+                    <li><a href="#" class="px-4 py-2 font-semibold text-gray-600 rounded hover:underline">Inicio</a></li>
+                    <li><a href="#servicios" class="px-4 py-2 font-semibold text-gray-600 rounded hover:underline">Nuestros Servicios</a></li>
+                    <li><a href="#quienes-somos" class="px-4 py-2 font-semibold text-gray-600 rounded hover:underline">Quienes Somos</a></li>
+                    <li><a href="#contacto" class="px-4 py-2 font-semibold text-gray-600 rounded hover:underline">Contactanos</a></li>
+                </ul>
+                <div class="inline-flex md:hidden" x-data="{ open: false }">
+                <button class="flex-none px-2 " @click="open = true">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+                    </svg>
+                    <span class="sr-only">Open Menu</span>
+                </button>
+                <div
+                    class="absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-white rounded shadow"
+                    x-show.transition="open" @click.away="open = false" x-cloak>
+                    <button class="self-end flex-none px-2 ml-2" @click="open = false">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <span class="sr-only">Close Menu</span>
+                    </button>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="px-4 py-2 font-semibold text-gray-600 rounded hover:underline">Inicio</a></li>
+                        <li><a href="#servicios" class="px-4 py-2 font-semibold text-gray-600 rounded hover:underline">Nuestros Servicios</a></li>
+                        <li><a href="#quienes-somos" class="px-4 py-2 font-semibold text-gray-600 rounded hover:underline">Quienes Somos</a></li>
+                        <li><a href="#contacto" class="px-4 py-2 font-semibold text-gray-600 rounded hover:underline">Contactanos</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+    </header>
+    <main>
+        <!--Banner-->    
+        <section class="relative bg-white" >
+            <img
+                class="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
+                src="/images/person.jpg"
+                alt="Couple on a bed with a dog"
+            />
+            <div class="hidden sm:block sm:inset-0 sm:absolute sm:bg-gradient-to-r sm:from-white sm:to-transparent"></div>
+            <div class="relative max-w-screen-xl px-4 py-32 mx-auto lg:h-screen lg:items-center lg:flex">
+                <div class="max-w-xl text-center sm:text-left">
+                    <h1 class="text-3xl font-extrabold sm:text-5xl">
+                    Una escucha profesional que te ayudará
+                    <strong class="font-extrabold text-rose-700 sm:block">
+                    a vivir mejor
+                    </strong>
+                    </h1>
+                <p class="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!
+                </p>         
+                </div>
+            </div>
+        </section>
+        <!--Nuestros servicios-->
+        <section id="servicios">
+            <div class="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
+                    <div class="relative z-10 lg:py-16">
+                        <div class="relative h-64 sm:h-80 lg:h-full">
+                            <img
+                            class="absolute inset-0 object-cover w-full h-full"
+                            src="https://www.hyperui.dev/photos/house-1.jpeg"
+                            alt="Indoors house"
+                            />
+                        </div>
+                    </div>
+                    <div class="relative flex items-center bg-gray-100">
+                        <span
+                            class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16"
+                        ></span>
+                        <div class="p-8 text-center sm:p-16 lg:p-24">
+                            <h2 class="text-2xl font-bold sm:text-3xl">
+                            Nuestros Servicios
+                            </h2>
+                            <p class="mt-4 text-gray-600">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
+                            molestiae! Quidem est esse numquam odio deleniti, beatae, magni
+                            dolores provident quaerat totam eos, aperiam architecto eius quis
+                            quibusdam fugiat dicta.
+                            </p>
+                            <a
+                            class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
+                            href="#contacto"
+                            >
+                            Contacto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Quienes somos-->   
+        <section class="bg-white" id="quienes-somos">
+            <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24">
+                <div class="max-w-xl mx-auto text-center">
+                    <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">
+                    Quienes Somos
+                    </h2>
+                </div>
+                <div
+                class="grid grid-cols-1 gap-8 mt-16 sm:grid-cols-2 sm:gap-16 "
+                >
+                    <div>
+                    <img
+                        src="/images/julio.jpg"
+                        alt="JulioSilva"
+                        class="object-cover w-24 h-24 mx-auto rounded-full shadow-xl"
+                    />
+            
+                    <blockquote
+                        class="flex flex-col justify-between p-12 -mt-6 text-center rounded-lg shadow-xl"
+                    >
+                        <p class="text-lg font-bold text-gray-700">Julio Silva</p>
+                        <p class="mt-1 text-xs font-medium text-gray-500">
+                        Psicoanalista
+                        </p>
+                        <p class="mt-4 text-sm text-gray-500">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+                        voluptatem alias ut provident sapiente repellendus.
+                        </p>
+                    </blockquote>
+                    </div>
+                    <div>
+                        <img
+                        src="/images/julio.jpg"
+                        alt="JulioSilva"
+                        class="object-cover w-24 h-24 mx-auto rounded-full shadow-xl"
+                        />
+                
+                        <blockquote
+                        class="flex flex-col justify-between p-12 -mt-6 text-center rounded-lg shadow-xl"
+                        >
+                        <p class="text-lg font-bold text-gray-700">Julio Silva</p>
+                        <p class="mt-1 text-xs font-medium text-gray-500">
+                            Psicoanalista
+                        </p>
+                        <p class="mt-4 text-sm text-gray-500">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+                            voluptatem alias ut provident sapiente repellendus.
+                        </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <!--Contacto-->
+        <section class="bg-gray-100" id="contacto">
+            <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24">
+                <div class="max-w-xl mx-auto text-center">
+                    <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">
+                    Contacto
+                    </h2>
+                </div>
+            <div class="p-8 bg-white rounded-lg shadow-lg lg:p-12 lg:col-span-3 my-8">
+                <form action="/send-email" method="POST" class="space-y-4" id="form">
+                    <div>
+                        <label class="sr-only" for="name">Nombre</label>
+                        <input class="w-full p-3 border-2 text-sm border-gray-200 rounded-lg" placeholder="Nombre" type="text" id="name" name="name" />
+                        <strong class="text-sm font-bold text-red-600"> </strong>
+                    </div>
+                    <div>
+                        <label class="sr-only" for="email">Email</label>
+                        <input class="w-full p-3 border-2 text-sm border-gray-200 rounded-lg" placeholder="Email" type="email" id="email" name="email"/>
+                        <strong class="text-sm font-bold text-red-600	"> </strong>
+                    </div>
+                    <div>
+                        <label class="sr-only" for="telefono">Telefono</label>
+                        <input class="w-full p-3 border-2 text-sm border-gray-200 rounded-lg" placeholder="Telefono" type="text" id="telephone" name="telephone" />
+                        <strong class="text-sm font-bold text-red-600	"> </strong>
+                    </div>
+                <div>
+                    <label class="sr-only" for="message">Mensaje</label>
+                    <textarea
+                        class="w-full p-3 border-2 text-sm border-gray-200 rounded-lg"
+                        placeholder="Mensaje"
+                        rows="8"
+                        id="message"
+                        name="message"
+                    ></textarea>
+                    <strong class="text-sm font-bold text-red-600	"> </strong>
+                </div>
+                <div class="mt-4">
+                    <button
+                        type="submit"
+                        class="inline-flex items-center justify-center w-full px-5 py-3 text-white bg-black rounded-lg sm:w-auto"
+                    >
+                        <span class="font-medium"> Enviar </span>
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5 ml-3"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </button>
+                    </div>
+                </form>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+        <!--Footer-->
+    <footer class="p-4 bg-white  shadow md:flex md:items-center md:justify-center md:p-6 bg-white">
+        <span class="sm:text-center font-semibold text-gray-600">© 2022 <a href="" class="hover:underline">Lucas Silva</a>. All Rights Reserved.
+        </span>
+    </footer>
+</body>
+</html>
